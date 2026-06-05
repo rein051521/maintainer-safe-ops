@@ -1,5 +1,13 @@
 # Release Checklist
 
+## Before publishing
+
+- [ ] No internal, private, or strategy notes are included in the public tree
+- [ ] `examples/**` fixtures contain only placeholder values (no real keys or tokens)
+- [ ] `.env.example` uses placeholder values only
+- [ ] LICENSE, README, SECURITY, CONTRIBUTING are present
+- [ ] `maintainer-safe-ops .` reports no high-severity findings
+
 ## Before tagging
 
 - [ ] CI is green
