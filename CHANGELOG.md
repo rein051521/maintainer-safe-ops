@@ -2,10 +2,16 @@
 
 ## 0.1.1 - 2026-06-05
 
-Added:
+Fixed:
 
-- JSON config support for excluding intentional fixtures from self-scan.
-- Release-check workflow now uses `.maintainer-safe-ops.json`.
+- Composite GitHub Action now installs its own package using `${{ github.action_path }}`,
+  so `uses: rein051521/maintainer-safe-ops@v0.1.1` works from consumer repositories
+  instead of trying to install the caller's checkout.
+
+Changed:
+
+- Self-scan configuration (`.maintainer-safe-ops.json`) excludes the rule
+  definition file to avoid self-referential matches.
 
 ## 0.1.0 - 2026-06-05
 
