@@ -32,3 +32,14 @@ jobs:
 
       - name: Test
         run: pytest
+
+  action-selftest:
+    name: GitHub Action self-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run the composite action against a clean fixture
+        uses: ./
+        with:
+          path: "examples/clean-project"
+          fail-on: "high"
