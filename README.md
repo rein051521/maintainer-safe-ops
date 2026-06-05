@@ -18,6 +18,21 @@ It helps maintainers check a repository before publishing, merging, or releasing
 
 The project is intentionally lightweight and dependency-free at runtime.
 
+## 概要（日本語）
+
+**maintainer-safe-ops** は、OSS のメンテナンス作業を少し安全にするための小さな CLI / GitHub Action です。
+
+リポジトリを公開・マージ・リリースする前に、次のような項目を検出します。
+
+- `.env` ファイルの誤公開
+- API キーらしき文字列・秘密情報らしき代入
+- `rm -rf /` などの危険なコマンド
+- force push コマンド
+- 危険な GitHub Actions のパターン
+- `README.md` / `LICENSE` / `.gitignore` / `SECURITY.md` / `CONTRIBUTING.md` などの OSS 必須ファイルの欠如
+
+ローカルでも CI でも実行でき、実行時の依存はありません。あくまで軽量な目安チェックであり、専用のシークレットスキャナや SAST の置き換えではありません。
+
 ## Why this exists
 
 Open-source maintainers often handle repetitive safety checks:
