@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from typing import Any
 
+from . import __version__
 from .scanner import ScanResult
 
 
@@ -71,6 +72,7 @@ def format_sarif(result: ScanResult) -> str:
                 "tool": {
                     "driver": {
                         "name": "maintainer-safe-ops",
+                        "version": __version__,
                         "informationUri": "https://github.com/rein051521/maintainer-safe-ops",
                         "rules": list(rules.values()),
                     }
