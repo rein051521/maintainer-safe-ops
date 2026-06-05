@@ -1,0 +1,7 @@
+{
+  "exclude": [
+    "tests/**",
+    "examples/risky-project/**",
+    "src/maintainer_safe_ops/rules.py"
+  ]
+}

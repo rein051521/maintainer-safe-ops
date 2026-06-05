@@ -1,0 +1,7 @@
+# Default owner for all files.
+* @rein051521
+
+# Security-sensitive workflows.
+.github/workflows/ @rein051521
+.github/dependabot.yml @rein051521
+SECURITY.md @rein051521
