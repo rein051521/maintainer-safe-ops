@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from maintainer_safe_ops import __version__
 from maintainer_safe_ops.sarif import format_sarif
 from maintainer_safe_ops.scanner import scan_repository
 
@@ -19,5 +20,7 @@ def test_sarif_output_is_valid_json(tmp_path: Path) -> None:
     sarif = json.loads(format_sarif(result))
 
     assert sarif["version"] == "2.1.0"
-    assert sarif["runs"][0]["tool"]["driver"]["name"] == "maintainer-safe-ops"
+    driver = sarif["runs"][0]["tool"]["driver"]
+    assert driver["name"] == "maintainer-safe-ops"
+    assert driver["version"] == __version__
     assert sarif["runs"][0]["results"]

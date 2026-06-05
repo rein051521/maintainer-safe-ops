@@ -23,11 +23,11 @@
 ## Tag
 
 ```bash
-git tag v0.1.0
-git push origin v0.1.0
+git tag vX.Y.Z
+git push origin vX.Y.Z
 ```
 
 ## Release notes
 
 Summarize the changes for the tag from `CHANGELOG.md`, then publish with
-`gh release create v0.1.0 --title "v0.1.0" --notes "<summary>"`.
+`gh release create vX.Y.Z --title "vX.Y.Z" --notes "<summary>"`.
