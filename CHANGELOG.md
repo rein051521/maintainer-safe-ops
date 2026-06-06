@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.2 - 2026-06-05
+
+Added:
+
+- `docs/REAL_WORLD_USAGE.md` documenting the CI self-test (dogfooding) of the action.
+- README "What it does not replace" comparison (gitleaks / CodeQL / Dependabot).
+- GitHub Action `branding` (icon and color) for Marketplace listing.
+
+Fixed:
+
+- README and CONTRIBUTING virtual-environment activation steps now render correctly
+  across operating systems.
+
+Changed:
+
+- Pin the action's internal `setup-python` step by commit SHA.
+
 ## 0.1.1 - 2026-06-05
 
 Fixed:

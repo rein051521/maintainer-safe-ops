@@ -14,7 +14,8 @@ Thanks for considering a contribution.
 
 ```bash
 python -m venv .venv
-.venv\Scripts\activate
+# Activate: source .venv/bin/activate (macOS/Linux)
+#           .venv\Scripts\Activate.ps1 (Windows PowerShell)
 pip install -e ".[dev]"
 pytest
 ruff check .
