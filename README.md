@@ -176,6 +176,24 @@ pytest
 ruff check .
 ```
 
+## Feedback
+
+This is an early release and feedback is very welcome — especially false positives,
+risky patterns it missed, rules you wish it had, and setup or adoption friction.
+
+- Share quick feedback in the [Feedback discussion (#19)](https://github.com/rein051521/maintainer-safe-ops/discussions/19)
+- Or comment on the [feedback tracking issue (#24)](https://github.com/rein051521/maintainer-safe-ops/issues/24)
+
+Rough notes are fine; no praise needed.
+
+### フィードバック（日本語）
+
+初期版です。誤検知・拾えていない危険パターン・追加してほしいルール・導入時の詰まりなど、
+辛口のフィードバックを歓迎します。
+
+- 気軽な意見は [フィードバック用 Discussion (#19)](https://github.com/rein051521/maintainer-safe-ops/discussions/19) へ
+- まとめての報告は [フィードバック用 Issue (#24)](https://github.com/rein051521/maintainer-safe-ops/issues/24) へ
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).

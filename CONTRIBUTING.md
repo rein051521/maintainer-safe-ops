@@ -2,6 +2,16 @@
 
 Thanks for considering a contribution.
 
+## Feedback
+
+Not ready to open a pull request? Feedback is just as valuable, especially in this
+early stage:
+
+- Quick thoughts and questions: [Feedback discussion (#19)](https://github.com/rein051521/maintainer-safe-ops/discussions/19)
+- False positives, missed risks, or setup friction: [feedback tracking issue (#24)](https://github.com/rein051521/maintainer-safe-ops/issues/24)
+
+Blunt, rough notes are welcome — no praise needed.
+
 ## Good first contributions
 
 - Add a detection rule with tests
