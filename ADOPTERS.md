@@ -10,3 +10,4 @@ projects without a real connection.
 | Repository | How it is used |
 |---|---|
 | [rein051521/maintainer-safe-ops](https://github.com/rein051521/maintainer-safe-ops) | Self-tested in CI on every push/PR (see [docs/REAL_WORLD_USAGE.md](docs/REAL_WORLD_USAGE.md)) |
+| [rein051521/maintainer-safe-ops-demo](https://github.com/rein051521/maintainer-safe-ops-demo) | Demonstration consumer repo running the action via CI ([run](https://github.com/rein051521/maintainer-safe-ops-demo/actions/runs/27054563239)) |

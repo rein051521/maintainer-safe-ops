@@ -1,5 +1,16 @@
 # Real-world usage
 
+## Used in a separate repository
+
+A dedicated demonstration repository consumes this action from a different
+repository (not the tool's own repo), proving cross-repository usage on
+GitHub-hosted runners:
+
+- Demo repository: <https://github.com/rein051521/maintainer-safe-ops-demo>
+- Successful workflow run: <https://github.com/rein051521/maintainer-safe-ops-demo/actions/runs/27054563239>
+
+(This is a maintainer-owned demonstration consumer, not a third-party adopter.)
+
 ## Self-dogfooding in CI
 
 This repository runs its own GitHub Action on every push and pull request.
