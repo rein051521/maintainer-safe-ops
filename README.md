@@ -202,6 +202,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 See [SECURITY.md](SECURITY.md).
 
+## Write-ups
+
+Maintainer-written introductions to the project (for context, not usage or adoption claims):
+
+- Qiita (Japanese): <https://qiita.com/rein051521/items/935caca7ef97245bb380>
+- X: <https://x.com/rein_rein23821/status/2063274789406716104>
+
 ## License
 
 MIT
