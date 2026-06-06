@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.3 - 2026-06-06
+
+Added:
+
+- New rule `MSO009_CURL_PIPE_SHELL`: flags downloaded scripts piped directly into
+  a shell (e.g. `curl ... | bash`), a common supply-chain risk. Includes positive
+  and false-positive-guard tests.
+
 ## 0.1.2 - 2026-06-05
 
 Added:
