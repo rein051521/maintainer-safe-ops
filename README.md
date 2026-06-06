@@ -65,6 +65,8 @@ Then install:
 pip install -e ".[dev]"
 ```
 
+> PyPI distribution is planned. For now, install from source (above) or use the GitHub Action.
+
 ## CLI usage
 
 ```bash
@@ -111,8 +113,11 @@ jobs:
           fail-on: "medium"
 ```
 
-This action is self-tested in CI on every push and pull request — see
-[docs/REAL_WORLD_USAGE.md](docs/REAL_WORLD_USAGE.md).
+A ready-to-copy workflow is provided at
+[examples/consumer-workflow.yml](examples/consumer-workflow.yml). This action is
+also self-tested in CI on every push and pull request — see
+[docs/REAL_WORLD_USAGE.md](docs/REAL_WORLD_USAGE.md). Adopters are listed in
+[ADOPTERS.md](ADOPTERS.md).
 
 ## Exit codes
 

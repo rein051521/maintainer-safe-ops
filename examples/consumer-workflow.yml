@@ -1,0 +1,23 @@
+# Example workflow for consumers of maintainer-safe-ops.
+# Copy this file into `.github/workflows/` in your own repository.
+
+name: Maintainer Safe Ops
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  safe-ops:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: rein051521/maintainer-safe-ops@v0.1.2
+        with:
+          path: "."
+          format: "human"
+          fail-on: "medium"
