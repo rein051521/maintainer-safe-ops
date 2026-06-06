@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.4 - 2026-06-06
+
+Changed:
+
+- Update consumer workflow examples to `actions/checkout@v6` (off the deprecated
+  Node 20 runtime) across the README, `examples/consumer-workflow.yml`, the
+  Japanese usage guide, and the real-world usage doc.
+- Refresh the real-world usage evidence to point at a warning-free demo run.
+
 ## 0.1.3 - 2026-06-06
 
 Added:

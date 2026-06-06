@@ -7,7 +7,7 @@ repository (not the tool's own repo), proving cross-repository usage on
 GitHub-hosted runners:
 
 - Demo repository: <https://github.com/rein051521/maintainer-safe-ops-demo>
-- Successful workflow run: <https://github.com/rein051521/maintainer-safe-ops-demo/actions/runs/27054563239>
+- Successful workflow run (warning-free): <https://github.com/rein051521/maintainer-safe-ops-demo/actions/runs/27055339304>
 
 (This is a maintainer-owned demonstration consumer, not a third-party adopter.)
 
@@ -24,7 +24,7 @@ action-selftest:
   name: GitHub Action self-test
   runs-on: ubuntu-latest
   steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - uses: ./
       with:
         path: "examples/clean-project"
@@ -47,8 +47,8 @@ You can see the live runs here:
 Add the action to any repository's workflow:
 
 ```yaml
-- uses: actions/checkout@v4
-- uses: rein051521/maintainer-safe-ops@v0.1.3
+- uses: actions/checkout@v6
+- uses: rein051521/maintainer-safe-ops@v0.1.4
   with:
     path: "."
     fail-on: "medium"
