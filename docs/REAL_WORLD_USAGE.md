@@ -1,5 +1,11 @@
 # Real-world usage
 
+## Published on the GitHub Marketplace
+
+The action is listed on the GitHub Marketplace, so it can be discovered and
+adopted from outside this repository:
+<https://github.com/marketplace/actions/maintainer-safe-ops>
+
 ## Used in a separate repository
 
 A dedicated demonstration repository consumes this action from a different
