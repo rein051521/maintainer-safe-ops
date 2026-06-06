@@ -2,6 +2,10 @@ name: "Maintainer Safe Ops"
 description: "Check repositories for maintainer safety risks before publishing, merging, or releasing."
 author: "Rein"
 
+branding:
+  icon: "shield"
+  color: "green"
+
 inputs:
   path:
     description: "Path to scan"
@@ -20,7 +24,7 @@ runs:
   using: "composite"
   steps:
     - name: Set up Python
-      uses: actions/setup-python@v6
+      uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6
       with:
         python-version: "3.12"
 

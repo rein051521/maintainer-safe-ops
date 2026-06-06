@@ -51,15 +51,17 @@ This tool provides a practical baseline check that can run locally or in CI.
 git clone https://github.com/rein051521/maintainer-safe-ops.git
 cd maintainer-safe-ops
 python -m venv .venv
-.venv\Scripts\activate  # Windows
-pip install -e ".[dev]"
 ```
 
-macOS/Linux:
+Activate the virtual environment:
+
+- **macOS / Linux:** `source .venv/bin/activate`
+- **Windows (PowerShell):** `.venv\Scripts\Activate.ps1`
+- **Windows (cmd):** `.venv\Scripts\activate.bat`
+
+Then install:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
 pip install -e ".[dev]"
 ```
 
@@ -102,12 +104,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: rein051521/maintainer-safe-ops@v0.1.1
+      - uses: rein051521/maintainer-safe-ops@v0.1.2
         with:
           path: "."
           format: "human"
           fail-on: "medium"
 ```
+
+This action is self-tested in CI on every push and pull request — see
+[docs/REAL_WORLD_USAGE.md](docs/REAL_WORLD_USAGE.md).
 
 ## Exit codes
 
@@ -128,6 +133,18 @@ jobs:
 ## Scope and limitations
 
 This project is a safety baseline, not a complete security audit. It does not guarantee that a repository is free of secrets or vulnerabilities. Maintainers should still use dedicated scanners and manual review for high-risk projects.
+
+### What it does not replace
+
+maintainer-safe-ops complements, but does not replace, dedicated tools:
+
+| Tool | Purpose | Relationship |
+|---|---|---|
+| gitleaks / TruffleHog | Deep secret scanning | Not a replacement — use them for thorough secret detection |
+| CodeQL / Semgrep | Static analysis (SAST) | Not a replacement — use them for code vulnerability analysis |
+| Dependabot / OSV | Dependency vulnerabilities | Not a replacement — use them for dependency alerts |
+
+Instead, it provides a fast, dependency-free **pre-publish / pre-merge / pre-release** checklist that a maintainer can run locally or in CI to catch obvious mistakes (a committed `.env`, a `rm -rf /`, a risky `pull_request_target` workflow, or missing OSS readiness files) before they reach a release.
 
 ## Roadmap
 

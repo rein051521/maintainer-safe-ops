@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: rein051521/maintainer-safe-ops@v0.1.1
+      - uses: rein051521/maintainer-safe-ops@v0.1.2
         with:
           path: "."
           format: "human"
