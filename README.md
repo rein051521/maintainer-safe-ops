@@ -12,6 +12,7 @@ It helps maintainers check a repository before publishing, merging, or releasing
 - API-key-like strings and secret-looking assignments
 - risky commands such as `rm -rf /`
 - force-push commands
+- downloaded scripts piped into a shell (`curl ... | bash`)
 - risky GitHub Actions patterns
 - missing OSS readiness files such as `README.md`, `LICENSE`, `.gitignore`, `SECURITY.md`, and `CONTRIBUTING.md`
 - optional SARIF output for security/code-scanning style workflows
@@ -106,7 +107,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: rein051521/maintainer-safe-ops@v0.1.2
+      - uses: rein051521/maintainer-safe-ops@v0.1.3
         with:
           path: "."
           format: "human"

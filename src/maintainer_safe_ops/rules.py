@@ -85,4 +85,12 @@ RULES: list[Rule] = [
         pattern=re.compile(r"(?is)permissions:\s*write-all|contents:\s*write"),
         help_uri="https://docs.github.com/actions/security-guides/automatic-token-authentication",
     ),
+    Rule(
+        id="MSO009_CURL_PIPE_SHELL",
+        severity="medium",
+        message="Downloaded script piped directly into a shell (supply-chain risk).",
+        message_ja="ダウンロードしたスクリプトを直接シェルへパイプしています（サプライチェーンのリスク）。",
+        pattern=re.compile(r"(?i)\b(curl|wget)\b[^|\n]*\|\s*(sudo\s+)?(ba)?sh\b"),
+        help_uri="https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks",
+    ),
 ]

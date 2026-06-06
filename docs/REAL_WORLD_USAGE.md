@@ -37,7 +37,7 @@ Add the action to any repository's workflow:
 
 ```yaml
 - uses: actions/checkout@v4
-- uses: rein051521/maintainer-safe-ops@v0.1.2
+- uses: rein051521/maintainer-safe-ops@v0.1.3
   with:
     path: "."
     fail-on: "medium"
