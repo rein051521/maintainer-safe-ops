@@ -115,8 +115,10 @@ jobs:
 ```
 
 A ready-to-copy workflow is provided at
-[examples/consumer-workflow.yml](examples/consumer-workflow.yml). This action is
-also self-tested in CI on every push and pull request — see
+[examples/consumer-workflow.yml](examples/consumer-workflow.yml). The action runs
+in a separate
+[demo repository](https://github.com/rein051521/maintainer-safe-ops-demo) and is
+self-tested in CI on every push and pull request — see
 [docs/REAL_WORLD_USAGE.md](docs/REAL_WORLD_USAGE.md). Adopters are listed in
 [ADOPTERS.md](ADOPTERS.md).
 
@@ -158,6 +160,7 @@ Instead, it provides a fast, dependency-free **pre-publish / pre-merge / pre-rel
 - Config file support
 - allowlist support for false positives
 - stronger SARIF compatibility
+- PyPI distribution (planned for v0.2)
 - npm package and pre-commit hook examples
 - Japanese documentation expansion
 
