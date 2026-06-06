@@ -39,6 +39,12 @@ dev = [
   "ruff>=0.6.0"
 ]
 
+[project.urls]
+Homepage = "https://github.com/rein051521/maintainer-safe-ops"
+Repository = "https://github.com/rein051521/maintainer-safe-ops"
+Issues = "https://github.com/rein051521/maintainer-safe-ops/issues"
+Changelog = "https://github.com/rein051521/maintainer-safe-ops/blob/main/CHANGELOG.md"
+
 [project.scripts]
 maintainer-safe-ops = "maintainer_safe_ops.cli:main"
 
