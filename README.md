@@ -13,6 +13,7 @@ It helps maintainers check a repository before publishing, merging, or releasing
 
 - accidental `.env` exposure
 - API-key-like strings and secret-looking assignments
+- hardcoded private key blocks (PEM)
 - risky commands such as `rm -rf /`
 - force-push commands
 - downloaded scripts piped into a shell (`curl ... | bash`)
@@ -110,7 +111,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: rein051521/maintainer-safe-ops@v0.1.4
+      - uses: rein051521/maintainer-safe-ops@v0.1.5
         with:
           path: "."
           format: "human"
