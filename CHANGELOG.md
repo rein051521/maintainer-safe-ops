@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.5 - 2026-06-06
+
+Added:
+
+- New rule `MSO010_PRIVATE_KEY_BLOCK` (high): detects hardcoded PEM private key
+  blocks (`-----BEGIN ... PRIVATE KEY-----`). Includes a positive test and a
+  prose-mention false-positive guard.
+
+Changed:
+
+- CodeQL workflow now grants `security-events: write` at the job level instead of
+  the top level (least-privilege; improves OpenSSF Scorecard Token-Permissions).
+
 ## 0.1.4 - 2026-06-06
 
 Changed:

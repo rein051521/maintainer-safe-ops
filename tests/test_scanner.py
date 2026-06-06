@@ -100,6 +100,27 @@ def test_plain_curl_is_not_flagged(tmp_path: Path) -> None:
     assert all(f.rule_id != "MSO009_CURL_PIPE_SHELL" for f in result.findings)
 
 
+def test_detects_private_key_block(tmp_path: Path) -> None:
+    add_basic_files(tmp_path)
+    header = "-----BEGIN " + "PRIVATE KEY-----"
+    footer = "-----END " + "PRIVATE KEY-----"
+    write(tmp_path / "key.txt", f"{header}\nMIIBVAIBADANExampleFakeBody==\n{footer}\n")
+
+    result = scan_repository(tmp_path)
+
+    assert result.ok is False
+    assert any(f.rule_id == "MSO010_PRIVATE_KEY_BLOCK" for f in result.findings)
+
+
+def test_prose_mentioning_keys_is_not_flagged(tmp_path: Path) -> None:
+    add_basic_files(tmp_path)
+    write(tmp_path / "notes.md", "Never commit your private key to the repository.\n")
+
+    result = scan_repository(tmp_path)
+
+    assert all(f.rule_id != "MSO010_PRIVATE_KEY_BLOCK" for f in result.findings)
+
+
 def test_detects_pull_request_target_write(tmp_path: Path) -> None:
     add_basic_files(tmp_path)
     write(

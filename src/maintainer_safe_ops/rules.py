@@ -93,4 +93,12 @@ RULES: list[Rule] = [
         pattern=re.compile(r"(?i)\b(curl|wget)\b[^|\n]*\|\s*(sudo\s+)?(ba)?sh\b"),
         help_uri="https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks",
     ),
+    Rule(
+        id="MSO010_PRIVATE_KEY_BLOCK",
+        severity="high",
+        message="Private key block detected.",
+        message_ja="秘密鍵ブロックが含まれています。",
+        pattern=re.compile(r"-----BEGIN (?:[A-Z0-9 ]+ )?PRIVATE KEY-----"),
+        help_uri="https://docs.github.com/code-security/secret-scanning",
+    ),
 ]
