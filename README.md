@@ -3,8 +3,11 @@
 [![CI](https://github.com/rein051521/maintainer-safe-ops/actions/workflows/ci.yml/badge.svg)](https://github.com/rein051521/maintainer-safe-ops/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/rein051521/maintainer-safe-ops/actions/workflows/codeql.yml/badge.svg)](https://github.com/rein051521/maintainer-safe-ops/actions/workflows/codeql.yml)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/rein051521/maintainer-safe-ops/badge)](https://securityscorecards.dev/viewer/?uri=github.com/rein051521/maintainer-safe-ops)
+[![GitHub Marketplace](https://img.shields.io/badge/GitHub%20Marketplace-Maintainer%20Safe%20Ops-2ea44f?logo=github)](https://github.com/marketplace/actions/maintainer-safe-ops)
 
 **maintainer-safe-ops** is a small CLI and GitHub Action for safer open-source maintainer workflows.
+
+Available on the [GitHub Marketplace](https://github.com/marketplace/actions/maintainer-safe-ops).
 
 It helps maintainers check a repository before publishing, merging, or releasing code by detecting:
 
