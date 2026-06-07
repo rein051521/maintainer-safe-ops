@@ -16,7 +16,7 @@ It helps maintainers check a repository before publishing, merging, or releasing
 - hardcoded private key blocks (PEM)
 - risky commands such as `rm -rf /`
 - force-push commands
-- downloaded scripts piped into a shell (`curl ... | bash`)
+- downloaded scripts piped into a shell (curl-into-bash style)
 - risky GitHub Actions patterns
 - missing OSS readiness files such as `README.md`, `LICENSE`, `.gitignore`, `SECURITY.md`, and `CONTRIBUTING.md`
 - optional SARIF output for security/code-scanning style workflows
@@ -141,6 +141,25 @@ self-tested in CI on every push and pull request — see
 | high | Secret exposure or highly dangerous operation |
 | medium | Risky maintainer operation that should be reviewed |
 | low | OSS readiness or quality issue |
+
+## Rules
+
+| ID | Severity | Detects |
+|---|---|---|
+| `MSO000_ENV_FILE` | high | A `.env` file committed to the repository |
+| `MSO001_OPENAI_KEY` | high | API-key-like string (`sk-…`) |
+| `MSO002_SECRET_ASSIGNMENT` | high | Secret-looking assignment (`api_key`/`secret`/`token`/`password`/`private_key = …`) |
+| `MSO003_SENSITIVE_ENV_NAME` | medium | Sensitive environment variable names (cloud / CI credential variables) |
+| `MSO004_RM_RF_ROOT` | high | Dangerous deletion (`rm -rf /`) |
+| `MSO005_FORCE_PUSH` | medium | Force-push commands |
+| `MSO006_PRODUCTION_DEPLOY` | medium | Production-deploy wording |
+| `MSO007_PULL_REQUEST_TARGET_WRITE` | high | `pull_request_target` combined with write permissions |
+| `MSO008_ACTIONS_WRITE_ALL` | medium | Broad GitHub Actions write permissions |
+| `MSO009_CURL_PIPE_SHELL` | medium | Downloaded script piped into a shell (curl-into-bash style) |
+| `MSO010_PRIVATE_KEY_BLOCK` | high | Hardcoded PEM private key block |
+| `MSO_READINESS_*` | medium | Missing OSS readiness file (`README`/`LICENSE`/`.gitignore`/`SECURITY`/`CONTRIBUTING`) |
+
+Known false positives can be excluded via `.maintainer-safe-ops.json` (see Configuration).
 
 ## Scope and limitations
 
