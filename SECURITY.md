@@ -10,9 +10,13 @@ The project is currently pre-1.0. Security fixes are applied to the latest relea
 
 ## Reporting a vulnerability
 
-Please open a private security advisory if available, or contact the maintainer directly.
+Please report security issues privately via GitHub's Private Vulnerability Reporting
+(enabled on this repository):
 
-Do not publish working exploit details before maintainers have had time to review and fix the issue.
+- <https://github.com/rein051521/maintainer-safe-ops/security/advisories/new>
+
+Do not open public issues for security reports, and do not publish working exploit
+details before maintainers have had time to review and fix the issue.
 
 ## What this tool does not guarantee
 
